@@ -3,16 +3,25 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DisplayComponent } from './display/display.component';
+import { EditComponent } from './edit/edit.component';
+import { HttpClientModule } from '@angular/common/http';
+import { WeekDayService } from './services/weekday.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DisplayComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [WeekDayService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

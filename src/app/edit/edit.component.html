@@ -1,0 +1,45 @@
+<form (ngSubmit)="onSubmit(daysForm)" #daysForm="ngForm">
+    <div class="form-group">
+        <label for="Date">Date</label>
+        <input type="text" class="form-control" id="Date" ngModel name="Date1" required>
+    </div>
+    <div class="form-group">
+        <label for="Date">Date</label>
+        <input type="text" class="form-control" id="Date" ngModel name="Date2" required>
+    </div>
+    <div class="form-group">
+        <label for="Date">Date</label>
+        <input type="text" class="form-control" id="Date" ngModel name="Date3" required>
+    </div>
+    <div class="form-group">
+        <label for="Date">Date</label>
+        <input type="text" class="form-control" id="Date" ngModel name="Date4" required>
+    </div>
+    <div class="form-group">
+        <label for="Date">Date</label>
+        <input type="text" class="form-control" id="Date" ngModel name="Date5" required>
+    </div>
+    <div class="form-group">
+        <label for="Date">Date</label>
+        <input type="text" class="form-control" id="Date" ngModel name="Date6" required>
+    </div>
+    <div class="form-group">
+        <label for="Date">Date</label>
+        <input type="text" class="form-control" id="Date" ngModel name="Date7" required>
+    </div>
+
+    <div class="form-group">
+        <label for="DayOfWeek">Day Of Week</label>
+        <input type="text" class="form-control" id="DayOfWeek" ngModel name="DayOfWeek">
+    </div>
+    <label for="options">Is Optional Sent</label>
+    <select id="options" class="form-control" ngModel name="IsOptionalSent">       
+        <option *ngFor="let option of options" [value]="option">
+            {{option}}
+        </option>
+    </select>
+    <div class="center">
+        <button type="submit" [disabled]="!daysForm.valid">Submit</button>
+        <button type="cancel" [routerLink]="['/home/display']" [disabled]="!daysForm.valid">Cancel</button>
+    </div>
+</form>

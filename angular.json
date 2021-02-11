@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "HyperThread"
+    }
+  },
+  "defaultProject": "HyperThread",
+  "cli": {
+    "analytics": "fa926acb-ce37-4f21-85a2-e4d29afa1cdf"
+  }
 }

@@ -1,0 +1,20 @@
+<table id="days">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Day Of Week</th>
+            <th>Is Optional Sent</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let day of weekDay">
+            <td>{{day.Date}}</td>
+            <td>{{day.DayOfWeek}}</td>
+            <td>{{day.IsOptionalSent}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="center">
+    <button [routerLink]="['/home/edit']">Edit</button>
+</div>
